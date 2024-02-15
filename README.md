@@ -20,10 +20,12 @@
 ![cookie_clicker](https://github.com/gabaal/Basic-Cookie-Clicker/assets/36296159/4a3f083a-23dd-4527-a0e6-00c693c6ffcb)
 
 
-## Steps to follow
+## Steps
 1. - [x] Create basic game with counter +1 cookie per second and a click me button to increase cookies by 1
 2. - [x] Seperate the App.jsx into seperate files each component (counter, timer)
 3. - [x] Add a reset button
-4. - [x] add upgrades /shop
-5. - [x] fix the bug that stops the CPS working while clicking the cookie.
-5. - [ ] save and retrieve game state from local storage
+4. - [x] add upgrades / shop
+5. - [x] fix the bug that stops the CPS working while clicking the cookie
+5. - [x] save and retrieve game state from local storage
+6. - [ ] Reset button needs to clear the local storage not just reset it to original game state
+7. - [ ] Apply some decent CSS, animate the cookie, add on hover for the buttons.
