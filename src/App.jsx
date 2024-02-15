@@ -66,7 +66,6 @@ export default function App() {
         <h1>Cookie Clicker</h1>
         <div className="cookie-container">
           <div>
-            <ResetButton handleReset={handleReset} />
             <p>Cookies: {cookies}</p>
           </div>
           <div>
@@ -77,6 +76,7 @@ export default function App() {
           </div>
           <Upgrades upgrades={upgrades} purchaseUpgrade={purchaseUpgrade} cookies={cookies} />
           <CookiesUpdater cookiesPerSecond={cookiesPerSecond} />
+          <ResetButton handleReset={handleReset} />
         </div>
       </header>
     </div>
