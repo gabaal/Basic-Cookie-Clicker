@@ -1,15 +1,16 @@
 import { useEffect } from 'react';
 
-function CookiesUpdater({ cookies, setCookies, cookiesPerSecond }) {
+export default function CookiesUpdater({ cookies, setCookies, upgrades }) {
   useEffect(() => {
     const interval = setInterval(() => {
+      const cookiesPerSecond = upgrades.reduce((total, upgrade) => {
+        return total + (upgrade.cookiesPerSecondIncrease || 0);
+      }, 0);
       setCookies(cookies + cookiesPerSecond);
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [cookies, cookiesPerSecond, setCookies]);
+  }, [cookies, setCookies, upgrades]);
 
-  return null; // This component doesn't render anything
+  return null; // doesn't render anything
 }
-
-export default CookiesUpdater;

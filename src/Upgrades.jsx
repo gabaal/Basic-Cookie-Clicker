@@ -1,5 +1,6 @@
 import React from'react'
 import './Upgrades.css'
+
 export default function Upgrades({ upgrades, purchaseUpgrade, cookies }) {
   const handlePurchaseUpgrade = (id, cost, cookiesPerSecondIncrease) => {
     if (cookies >= cost) {
