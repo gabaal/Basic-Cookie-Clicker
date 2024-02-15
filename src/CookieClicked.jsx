@@ -1,7 +1,6 @@
 import React from'react'
+import cookieImage from './cookie.png'
 
 export default function CookieClicked({ handleClick }) {
-  return (
-    <button onClick={handleClick}>Click Me!</button>
-  )
+  return <img src={cookieImage} onClick={handleClick} style={{ cursor: 'pointer' }} />;
 }
