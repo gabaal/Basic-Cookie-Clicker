@@ -1,9 +1,10 @@
 
 import React from'react'
-import { useState, useEffect} from 'react'
+import { useState} from 'react'
 import './App.css'
 import CookieClicked from './CookieClicked.jsx'
 import CookiesPerSecond from './CookiesPerSecond.jsx'
+import CookiesUpdater from './CookiesUpdater.jsx'
 import ResetButton from './ResetButton.jsx'
 import Upgrades from './Upgrades.jsx'
 
@@ -30,9 +31,13 @@ function App() {
 
   // Function to purchase an upgrade
   const purchaseUpgrade = (id, cost, cookiesPerSecondIncrease) => {
-    setCookies(cookies - cost);
-    setCookiesPerSecond(cookiesPerSecond + cookiesPerSecondIncrease);
-    setUpgrades(upgrades.filter(upgrade => upgrade.id !== id));
+    if (cookies >= cost) {
+      setCookies(cookies - cost);
+      setCookiesPerSecond(cookiesPerSecond + cookiesPerSecondIncrease);
+      setUpgrades(upgrades.filter(upgrade => upgrade.id !== id));
+    } else {
+      alert('Not enough cookies to purchase this upgrade!');
+    }
   };
 
   return (
@@ -45,16 +50,18 @@ function App() {
             <p>Cookies: {cookies}</p>
           </div>
           <div>
-            <CookiesPerSecond cookies={cookies} setCookies={setCookies} cookiesPerSecond={cookiesPerSecond} />
+            <CookiesPerSecond cookies={cookies} setCookies={setCookies} cookiesPerSecond={cookiesPerSecond} /> {/* Use the CookiesPerSecond component */}
           </div>
           <div>
             <CookieClicked handleClick={handleClickCookie} />
           </div>
-          <Upgrades upgrades={upgrades} purchaseUpgrade={purchaseUpgrade} cookies={cookies} /> {/* Pass cookies as a prop */}
+          <Upgrades upgrades={upgrades} purchaseUpgrade={purchaseUpgrade} cookies={cookies} />
+          <CookiesUpdater cookies={cookies} setCookies={setCookies} cookiesPerSecond={cookiesPerSecond} /> {/* Use the CookiesUpdater component */}
         </div>
       </header>
     </div>
   );
 }
+
 
 export default App;
