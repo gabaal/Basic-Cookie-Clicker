@@ -16,3 +16,5 @@
 
 ## Stretch Goals
 🏹 Store the cookies and cookiesPerSecond values in localStorage so they persist between page refreshes
+
+![cookie_clicker](https://github.com/gabaal/Basic-Cookie-Clicker/assets/36296159/4a3f083a-23dd-4527-a0e6-00c693c6ffcb)
