@@ -21,8 +21,8 @@
 
 
 ## Steps to follow
-1.  Create basic game with counter +1 cookie per second and a click me button to increase cookies by 1
-2.  Seperate the App.jsx into seperate files each component (counter, timer)
-3.  Add a reset button
-4.  add upgrades /shop
-5.  save and retrieve game state from local storage
+1. - [x] Create basic game with counter +1 cookie per second and a click me button to increase cookies by 1
+2. - [x] Seperate the App.jsx into seperate files each component (counter, timer)
+3. - [ ] Add a reset button
+4. - [ ] add upgrades /shop
+5. - [ ] save and retrieve game state from local storage
