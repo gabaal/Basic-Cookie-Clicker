@@ -7,6 +7,7 @@ import CookiesPerSecond from './CookiesPerSecond.jsx'
 import CookiesUpdater from './CookiesUpdater.jsx'
 import ResetButton from './ResetButton.jsx'
 import Upgrades from './Upgrades.jsx'
+import { saveGameState, retrieveGameState } from './LocalStorage.jsx'
 
 export default function App() {
   const initialUpgrades = [
@@ -17,9 +18,15 @@ export default function App() {
     { id: 5, name: 'Upgrade 5', cost: 50, cookiesPerSecondIncrease: 5 },
   ];
 
-  const [cookies, setCookies] = useState(0);
-  const [cookiesPerSecond, setCookiesPerSecond] = useState(1);
-  const [upgrades, setUpgrades] = useState(initialUpgrades);
+  const { cookies: initialCookies, cookiesPerSecond: initialCookiesPerSecond, upgrades: initialUpgradesState } = retrieveGameState();
+
+  const [cookies, setCookies] = useState(initialCookies);
+  const [cookiesPerSecond, setCookiesPerSecond] = useState(initialCookiesPerSecond);
+  const [upgrades, setUpgrades] = useState(initialUpgradesState);
+
+  useEffect(() => {
+    saveGameState(cookies, cookiesPerSecond, upgrades);
+  }, [cookies, cookiesPerSecond, upgrades]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -74,3 +81,4 @@ export default function App() {
     </div>
   );
 }
+
