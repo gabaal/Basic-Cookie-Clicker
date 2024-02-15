@@ -18,3 +18,10 @@
 🏹 Store the cookies and cookiesPerSecond values in localStorage so they persist between page refreshes
 
 ![cookie_clicker](https://github.com/gabaal/Basic-Cookie-Clicker/assets/36296159/4a3f083a-23dd-4527-a0e6-00c693c6ffcb)
+
+
+## Steps to follow
+1.  Create basic game with counter +1 cookie per second and a click me button to increase cookies by 1
+2.  Add a reset button
+3.  add upgrades /shop
+4.  save and retrieve game state from local storage
