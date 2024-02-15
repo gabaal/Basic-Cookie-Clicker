@@ -27,5 +27,5 @@
 4. - [x] add upgrades / shop
 5. - [x] fix the bug that stops the CPS working while clicking the cookie
 5. - [x] save and retrieve game state from local storage
-6. - [ ] Reset button needs to clear the local storage not just reset it to original game state
+6. - [x] Reset button needs to clear the local storage not just reset it to original game state
 7. - [ ] Apply some decent CSS, animate the cookie, add on hover for the buttons.

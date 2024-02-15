@@ -41,6 +41,7 @@ export default function App() {
   };
 
   const handleReset = () => {
+    localStorage.clear();
     setCookies(0);
     setCookiesPerSecond(1);
     setUpgrades(initialUpgrades);
