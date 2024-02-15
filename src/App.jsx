@@ -5,9 +5,18 @@ import './App.css'
 import CookieClicked from './CookieClicked.jsx'
 import CookiesPerSecond from './CookiesPerSecond.jsx'
 import ResetButton from './ResetButton.jsx'
+import Upgrades from './Upgrades.jsx'
+
 function App() {
   const [cookies, setCookies] = useState(0);
   const [cookiesPerSecond, setCookiesPerSecond] = useState(1);
+  const [upgrades, setUpgrades] = useState([
+    { id: 1, name: 'Upgrade 1', cost: 10, cookiesPerSecondIncrease: 1 },
+    { id: 2, name: 'Upgrade 2', cost: 20, cookiesPerSecondIncrease: 2 },
+    { id: 3, name: 'Upgrade 3', cost: 30, cookiesPerSecondIncrease: 3 },
+    { id: 4, name: 'Upgrade 4', cost: 40, cookiesPerSecondIncrease: 4 },
+    { id: 5, name: 'Upgrade 5', cost: 50, cookiesPerSecondIncrease: 5 },
+  ]);
 
   // Function to handle clicking on the cookie
   const handleClickCookie = () => {
@@ -18,7 +27,14 @@ function App() {
   const handleReset = () => {
     setCookies(0);
   };
-  
+
+  // Function to purchase an upgrade
+  const purchaseUpgrade = (id, cost, cookiesPerSecondIncrease) => {
+    setCookies(cookies - cost);
+    setCookiesPerSecond(cookiesPerSecond + cookiesPerSecondIncrease);
+    setUpgrades(upgrades.filter(upgrade => upgrade.id !== id));
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -34,6 +50,7 @@ function App() {
           <div>
             <CookieClicked handleClick={handleClickCookie} />
           </div>
+          <Upgrades upgrades={upgrades} purchaseUpgrade={purchaseUpgrade} cookies={cookies} /> {/* Pass cookies as a prop */}
         </div>
       </header>
     </div>
