@@ -25,4 +25,5 @@
 2. - [x] Seperate the App.jsx into seperate files each component (counter, timer)
 3. - [x] Add a reset button
 4. - [x] add upgrades /shop
+5. - [ ] fix the bug that stops the CPS working while clicking the cookie.
 5. - [ ] save and retrieve game state from local storage
