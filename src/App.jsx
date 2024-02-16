@@ -7,7 +7,7 @@ import CookiesUpdater from './CookiesUpdater.jsx'
 import ResetButton from './ResetButton.jsx'
 import Upgrades from './Upgrades.jsx'
 import { saveGameState, retrieveGameState } from './LocalStorage.jsx'
-import initialUpgrades from './upgradesData.js'
+
 
 export default function App() {
 
@@ -33,13 +33,6 @@ export default function App() {
     setCookies(cookies => cookies + 1);
   };
 
-  const handleReset = () => {
-    localStorage.clear();
-    setCookies(0);
-    setCookiesPerSecond(1);
-    setUpgrades(initialUpgrades);
-  };
-
   return (
     <div className="App">
         <h1>Cookie Clicker</h1>
@@ -55,7 +48,7 @@ export default function App() {
           </div>
           <Upgrades upgrades={upgrades} setUpgrades={setUpgrades} cookies={cookies} setCookies={setCookies} setCookiesPerSecond={setCookiesPerSecond} />
           <CookiesUpdater cookiesPerSecond={cookiesPerSecond} />
-          <ResetButton handleReset={handleReset} />
+          <ResetButton setCookies={setCookies} setCookiesPerSecond={setCookiesPerSecond} setUpgrades={setUpgrades} />
         </div>
     </div>
   );

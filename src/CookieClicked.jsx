@@ -2,7 +2,6 @@ import React from'react'
 import './cookie.css'
 import cookie from './cookie.png'
 
-
 export default function CookieClicked({ handleClick }) {
   return (
     <div>
