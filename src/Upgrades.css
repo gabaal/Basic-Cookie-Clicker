@@ -2,3 +2,8 @@
 .upgrade-details {
   font-size: 18px; /* Adjust the font size as needed */
 }
+
+.upgradesButton:hover {
+    box-shadow: 0 12px 16px 0 white, 0 17px 50px 0 red;
+    background-color: lightgreen;
+}

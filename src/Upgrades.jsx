@@ -16,7 +16,7 @@ export default function Upgrades({ upgrades, purchaseUpgrade, cookies }) {
       {upgrades.map(upgrade => (
         <div key={upgrade.id} className="upgrade-item">
           <p className="upgrade-details">Plus {upgrade.cookiesPerSecondIncrease} CPS</p>
-          <button onClick={() => handlePurchaseUpgrade(upgrade.id, upgrade.cost, upgrade.cookiesPerSecondIncrease)}>{upgrade.cost} cookies</button>
+          <button className='upgradesButton' onClick={() => handlePurchaseUpgrade(upgrade.id, upgrade.cost, upgrade.cookiesPerSecondIncrease)}>{upgrade.cost} cookies</button>
         </div>
       ))}
     </div>

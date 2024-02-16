@@ -1,7 +1,7 @@
 import React from'react'
-import './buttons.css'
+import './resetButton.css'
 export default function ResetButton({ handleReset }) {
   return (
-  <button onClick={handleReset}>Reset</button>
+  <button className='resetButton' onClick={handleReset}>Reset</button>
   )
 }
