@@ -1,12 +1,12 @@
 import React from'react'
 import { useState, useEffect } from 'react'
-import './App.css'
 import CookieClicked from './CookieClicked.jsx'
 import CookiesPerSecond from './CookiesPerSecond.jsx'
 import CookiesUpdater from './CookiesUpdater.jsx'
 import ResetButton from './ResetButton.jsx'
 import Upgrades from './Upgrades.jsx'
 import { saveGameState, retrieveGameState } from './LocalStorage.jsx'
+import './App.css'
 
 
 export default function App() {
