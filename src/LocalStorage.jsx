@@ -7,11 +7,11 @@ export const saveGameState = (cookies, cookiesPerSecond, upgrades) => {
   localStorage.setItem('upgrades', JSON.stringify(upgrades));
 };
 
-// Utility function to retrieve game state from local storage, or || set to default state if it doesnt exist
+// Utility function to retrieve game state from local storage, or || set to default state if it doesn't exist
 export const retrieveGameState = () => {
   const cookies = parseInt(localStorage.getItem('cookies')) || 0;
   const cookiesPerSecond = parseInt(localStorage.getItem('cookiesPerSecond')) || 1;
-  const upgrades = JSON.parse(localStorage.getItem('upgrades')) || [initialUpgrades]; //Hope this works as upgrades not showing on first run
+  const upgrades = JSON.parse(localStorage.getItem('upgrades')) || initialUpgrades; //Hope this works as upgrades not showing on first run
 
   return { cookies, cookiesPerSecond, upgrades };
 };

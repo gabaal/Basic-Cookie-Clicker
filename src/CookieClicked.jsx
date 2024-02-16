@@ -1,12 +1,14 @@
 import React from'react'
-import cookieImage from './cookie.png'
+import './cookie.css'
+
 
 export default function CookieClicked({ handleClick }) {
   return (
-    <div className="cookie-clicked">
+    <div>
       <img
-        src="./cookie.png"
-        alt="Cookie"
+      className='cookie'
+        src="src/cookie.png"
+        alt="Image of a ookie"
         onClick={handleClick}
       />
     </div>
