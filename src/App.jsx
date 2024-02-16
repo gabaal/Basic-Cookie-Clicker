@@ -1,5 +1,3 @@
-
-
 import React from'react'
 import { useState, useEffect } from 'react'
 import './App.css'
@@ -42,19 +40,6 @@ export default function App() {
     setUpgrades(initialUpgrades);
   };
 
-  const purchaseUpgrade = (id, cost, cookiesPerSecondIncrease) => {
-    if (cookies >= cost) {
-      setCookies(cookies => cookies - cost);
-      setCookiesPerSecond(cookiesPerSecond => cookiesPerSecond + cookiesPerSecondIncrease);
-      const newUpgrades = upgrades.map(upgrade =>
-        upgrade.id === id ? { ...upgrade, cost: upgrade.cost * 2 } : upgrade
-      );
-      setUpgrades(newUpgrades);
-    } else {
-      alert('Not enough cookies to purchase this upgrade!');
-    }
-  };
-
   return (
     <div className="App">
         <h1>Cookie Clicker</h1>
@@ -68,7 +53,7 @@ export default function App() {
           <div>
             <CookieClicked handleClick={handleClickCookie} />
           </div>
-          <Upgrades upgrades={upgrades} purchaseUpgrade={purchaseUpgrade} cookies={cookies} />
+          <Upgrades upgrades={upgrades} setUpgrades={setUpgrades} cookies={cookies} setCookies={setCookies} setCookiesPerSecond={setCookiesPerSecond} />
           <CookiesUpdater cookiesPerSecond={cookiesPerSecond} />
           <ResetButton handleReset={handleReset} />
         </div>
