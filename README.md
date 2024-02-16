@@ -28,9 +28,9 @@
 5.  - [x] fix the bug that stops the CPS working while clicking the cookie
 5.  - [x] save and retrieve game state from local storage
 6.  - [x] Reset button needs to clear the local storage not just reset it to original game state
-7.  - [ ] Test live site via Github pages
-8.  - [x] add on hover CSS for the buttons.
-9.  - [ ] animate the cookie.
+7.  - [x] Test live site via Render and Vite
+8.  - [x] add on hover CSS for the buttons
+9.  - [ ] animate the cookie
 10. - [ ] Apply some decent CSS
 11. - [x] Move the upgrades array to a seperate file?
 12. - [ ] Try and move as much as possible from the App.jsx file to seperate component files.
