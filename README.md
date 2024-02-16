@@ -19,6 +19,7 @@
 
 ![cookie_clicker](https://github.com/gabaal/Basic-Cookie-Clicker/assets/36296159/4a3f083a-23dd-4527-a0e6-00c693c6ffcb)
 
+![cookie_clicker_wireframe](https://github.com/gabaal/Cookie-Clicker/assets/36296159/7d3406a8-98fa-4ded-bcd8-d93013efb52c)
 
 ## Steps
 1.  - [x] Create basic game; counter +1 cookie per second and a button to increase cookies by 1
