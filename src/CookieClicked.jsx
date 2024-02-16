@@ -7,7 +7,7 @@ export default function CookieClicked({ handleClick }) {
     <div>
       <img
       className='cookie'
-        src="./cookie.png"
+        src="public/cookie.png"
         alt="Image of a ookie"
         onClick={handleClick}
       />
